@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shazz | The Ultimate Gaming Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <ul class="navitem">
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="blogs.html" class="about">Blogs</a></li>
+            <li><a href="cart.html" class="cart">Cart</a></li>
+            <li><a href="contact.html" class="contact">Contact</a></li>
+        </ul>
+
+        <div class="navitem">
+            <input placeholder="Search here...." id="search" name="text" type="text" />
+        </div>
+
+        <div class="clock navitem">
+            Time :-
+            <span id="hrs"></span>
+            <span>:</span>
+            <span id="min"></span>
+            <span>:</span>
+            <span id="sec"></span>
+        </div>
+    </nav>
+
+    <div class="homepg">
+        <div class="vid_container">
+            <video src="media/videoplayback.mp4" autoplay muted loop></video>
+            <h2 id="greet_txt" class="neonText"></h2>
+        </div>
+        <div class="heading neonText">Check This Out</div>
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div> -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="blogs.html"><img src="media/img3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Upcoming Events</h5>
+                            <p>Level Up Your Experience: Join Us for the Ultimate Gaming Extravaganza!</p>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="blogs.html"><img src="media/img1.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Gaming Tips and Tricks</h5>
+                        <p>Gaming tips, strategies, or tutorials related to popular games</p>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="blogs.html"><img src="media/img2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Exclusive Deals</h5>
+                    <p>Limited-time promotions, features offers, discounts and coupons.</p>
+            </a>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+
+    <div class="heading neonText">Games at our Store</div>
+
+    <div class="gamecontainer">
+
+        <div class="gamecard">
+            <img src="media/gta5.jpg" alt="video">
+            <h4 class="neonText gameName">Grand Theft Auto V</h4>
+            <p>Open-world action-adventure game where players can explore a sprawling city, engage in missions, and
+                cause mayhem.
+            </p>
+            <p class="price">$30</p> <!-- Add price here -->
+            <div class="btnsection">
+                <button class="watchbtn"><a href="https://youtu.be/QkkoHAzjnUs" target="_blank">Watch</a></button>
+                <button class="cartbtn" onclick="addToCart('Grand Theft Auto V', 30)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="gamecard">
+            <img src="media/sims4.png" alt="video">
+            <h4 class="neonText gameName">The Sims 4 Crystal Creations</h4>
+            <p>Life simulation game that lets players create and control virtual characters, build homes, and pursue
+                diverse careers.
+            </p>
+            <p class="price">$25</p> <!-- Add price here -->
+            <div class="btnsection">
+                <button class="watchbtn"><a href="https://youtu.be/rdD7je57_-4" target="_blank">Watch</a></button>
+                <button class="cartbtn" onclick="addToCart('The Sims 4 Crystal Creations', 25)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="gamecard">
+            <img src="media/cod.jpg" alt="video">
+            <h4 class="neonText gameName">Call of Duty: Warzone</h4>
+            <p>Fast-paced first-person shooter franchise known for its cinematic campaigns, multiplayer modes, and
+                competitive esports scene.
+            </p>
+            <p class="price">$40</p> <!-- Add price here -->
+            <div class="btnsection">
+                <button class="watchbtn"><a href="https://youtu.be/eBYXHsbeYKU" target="_blank">Watch</a></button>
+                <button class="cartbtn" onclick="addToCart('Call of Duty: Warzone', 40)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="gamecard">
+            <img src="media/pubg.jpg" alt="video">
+            <h4 class="neonText gameName">PUBG</h4>
+            <p>Battle royale game where players parachute onto an island, scavenge for weapons, and compete to be the
+                last one standing.
+            </p>
+            <p class="price">$35</p> <!-- Add price here -->
+            <div class="btnsection">
+                <button class="watchbtn"><a href="https://youtu.be/uCd6tbUAy6o" target="_blank">Watch</a></button>
+                <button class="cartbtn" onclick="addToCart('PUBG', 35)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="gamecard">
+            <img src="media/prophunt.jpg" alt="video">
+            <h4 class="neonText gameName">PROPHUNT</h4>
+            <p>Multiplayer game mode where players disguise themselves as objects within the game environment, blending
+                in to avoid detection while the opposing team hunts them down.
+            </p>
+            <p class="price">$22</p> <!-- Add price here -->
+            <div class="btnsection">
+                <button class="watchbtn"><a href="https://youtu.be/O-ZMNmVvRgY" target="_blank">Watch</a></button>
+                <button class="cartbtn" onclick="addToCart('PROPHUNT', 22)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="gamecard">
+            <img src="media/valorant.jpg" alt="video">
+            <h4 class="neonText gameName">Valorant</h4>
+            <p>Tactical first-person shooter featuring character-based abilities, strategic gameplay, and intense team
+                battles.
+            </p>
+            <p class="price">$25</p> <!-- Add price here -->
+            <div class="btnsection">
+                <button class="watchbtn"><a href="https://youtu.be/e_E9W2vsRbQ" target="_blank">Watch</a></button>
+                <button class="cartbtn" onclick="addToCart('Valorant', 25)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>Made By Shravani Dhore &#169 | 2024</footer>
+
+
+
+    <script>
+        // Voice Greeting
+        // Define a function to handle username prompt and initialization
+        function initialize() {
+            var username = localStorage.getItem('username');
+
+            // If username is not already stored in localStorage, prompt the user
+            if (!username || username.trim() === "") {
+                setUsername();
+            } else {
+                greetUser(username);
+            }
+        }
+
+        function setUsername() {
+            var username = prompt("Please enter your name:");
+            while (!username || username.trim() === "") {
+                alert("No username entered or only whitespace characters entered. Please enter your name to proceed.");
+                username = prompt("Please enter your name:");
+            }
+            localStorage.setItem('username', username);
+            greetUser(username);
+        }
+
+        function greetUser(username) {
+            // Greet the user
+            let speech = new SpeechSynthesisUtterance();
+            speech.text = "Hi " + username + ". Welcome to Shazz, the ultimate Gen Z Gaming Store";
+            window.speechSynthesis.speak(speech);
+            let greetTxt = document.getElementById("greet_txt");
+            greetTxt.innerHTML = "Hello " + username.toUpperCase() + "<h5>Welcome to</h5><h4> Shazz | The Ultimate Gaming Store</h4>";
+
+            // Add "Not You?" button
+            let notYouButton = document.createElement("button");
+            notYouButton.textContent = "Not You?";
+            notYouButton.id = "notyou"; // Set id attribute to "notyou"
+            notYouButton.addEventListener("click", function () {
+                clearUsername();
+                setUsername();
+            });
+            greetTxt.appendChild(notYouButton);
+        }
+
+        // Define a function to clear the username from localStorage
+        function clearUsername() {
+            localStorage.removeItem('username');
+        }
+
+        // Call the initialize function on page load
+        initialize();
+
+
+        function addToCart(itemName, price) {
+            const cartItem = {
+                name: itemName,
+                price: price,
+                quantity: 1 // Initial quantity
+            };
+            // Retrieve existing cart items from localStorage
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            // Add the new item to cartItems array
+            cartItems.push(cartItem);
+            // Store updated cart items back to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

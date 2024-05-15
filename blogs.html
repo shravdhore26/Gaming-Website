@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/blogs.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navitem">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="navitem">
+            <input placeholder="Search here...." id="search" name="text" type="text" />
+        </div>
+
+
+
+        <div class="clock navitem">
+            Time :-
+            <span id="hrs"></span>
+            <span>:</span>
+            <span id="min"></span>
+            <span>:</span>
+            <span id="sec"></span>
+        </div>
+    </nav>
+    <div class="vid_container">
+        <video src="media/videoplayback.mp4" autoplay muted loop></video>
+    </div>
+
+    <h2 class="heading">Mini Blogs</h2>
+
+    <div class="upper">
+        <div class="blog_input">
+
+            <label class="input_item" id="blog_title">Title: </label>
+            <input type="text" placeholder="Blog Title">
+            <label class="input_item" id="blog_name">Display Name: </label>
+            <input type="text" placeholder="Name">
+            <label class="input_item" id="blog_desc">Blog: </label>
+            <input type="textarea" placeholder="Blog Description">
+            <button type="submit" class="addbutton" onclick="addBlog()">Add</button>
+        </div>
+    </div>
+
+
+    <main id="main_blogs">
+    </main>
+
+
+
+
+    <footer>Made By Shravani Dhore &#169 | 2024</footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navitem">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="navitem">
+            <input placeholder="Search here...." id="search" name="text" type="text" />
+        </div>
+
+
+
+        <div class="clock navitem">
+            Time :-
+            <span id="hrs"></span>
+            <span>:</span>
+            <span id="min"></span>
+            <span>:</span>
+            <span id="sec"></span>
+        </div>
+    </nav>
+    <div class="vid_container">
+        <video src="media/videoplayback.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="contact_container">
+        <form class="contact_form">
+            <div class="input-group">
+                <label>Full Name:*</label>
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <span id="name_error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Gender:*</label>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Other
+            </div>
+
+            <div class="input-group">
+                <label>Phone No.:*</label>
+                <input type="tel" placeholder="+91 123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone_error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Email Id:*</label>
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email_error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Any Message/ Suggestions:</label>
+                <textarea rows="5" placeholder="Enter your message"></textarea>
+            </div>
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit_error"></span>
+
+        </form>
+    </div>
+
+    <footer>Made By Shravani Dhore &#169 | 2024</footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
